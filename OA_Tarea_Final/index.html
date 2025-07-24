@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Encabezado del navegador-->
+    <title>La Misión IF: Código en la Nave Galáctica</title>
+    
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <!--Título-->
+    <header>
+        <h1> La Misión IF: Código en la Nave Galáctica</h1>
+        <img src="img/nave.png" alt ="La nave Galáctica" width="200" height="250"
+        <hr>
+        <p>Aprende  condicionales mientras salvas una nave espacial</p>
+        
+    </header>
+<!--Intoducción-->
+    <main>
+        <section id="intro">
+            <h2> Introducción</h2>
+            <p>Sos un cadete en una nave <strong>Galáctica</strong>. Para completar tu misión, necesitas usar estructuras condicionales y tomar decisiones críticas para el sistema de abordo.</p>
+
+        </section>
+<!--Teórico-->
+        <section id="teoria">
+            <h2>¿Qué es una condicional?</h2>
+            <p> La sentencia <strong>if</strong>  en programación es una estructura de control condicional que permite ejecutar un bloque de código <strong>solo si se cumple una condición lógica específica</strong> . Si la condición es verdadera, se ejecuta el código dentro del bloque if; de lo contrario, se omite ese bloque y el programa continúa. </p>
+            <p> Se inicia con la palabra reservada <strong> if</strong>.</p>
+            <p> La condición que se evalúa como verdadera (true) o falsa (false) pueden incluir comparaciones :</p>
+            <ol>
+                <ul> Mayor que ></ul>
+                <ul> Mayor o igual >=</ul>
+                <ul> Menor  que <</ul>
+                <ul> Menor o igual <=</ul>
+                <ul> Igual  que == </ul>
+                <ul> Distinto que !=</ul>
+            </ol>
+            <p>Por ejemplo, en pseudocódigo:</p>    
+            <pre><code>si (oxigeno &lt; 20%) {
+    activarProtocoloEmergencia();
+} else {
+    continuar();
+}</code></pre>
+        </section>
+<!--Desafío 1-->
+        <section id="desafio">
+            <h2> Misión 1: Nivel de oxígeno</h2>
+            <p>Si el nivel de oxígeno es menor a 20%, activá el protocolo de emergencia. Si es mayor a 50%, activá los ventiladores.</p>
+
+            <label for="oxigeno">Nivel de oxígeno (%):</label>
+            <input type="number" id="oxigeno" min="0" max="100">
+            <button onclick="evaluarOxigeno()">Enviar</button>
+            <p id="resultado"></p>
+        </section>
+        <!--incluye a javaScript-->
+        <script src="logica.js"></script>
+
+
+            <!--Desafío final-->
+        </section>
+         <section id="final">
+            <h2> Misión 2: Simulación de Crisis Galáctica</h2>
+            <p>Formando un equipo de 2 o 3 cadetes. Analicen y resuelvan al menos una de las siguientes situaciones críticas utilizando estructuras condicionales y múltiples variables. Presenten su solución en pseudocódigo o código real, y justifiquen su razonamiento.</p>
+
+            <h3> Situación 1: Fuga de oxígeno</h3>
+            <ul>
+                <li><strong>oxígeno</strong> (porcentaje)</li>
+                <li><strong>atmósferaEstable</strong> (true o false)</li>
+                <li><strong>puertaExteriorCerrada</strong> (true o false)</li>
+            </ul>
+            <p>Si el oxígeno es menor a 25% y la atmósfera no está estable, activar protocolo de emergencia. Si la puerta exterior está abierta, cerrarla primero.</p>
+
+            <h3> Situación 2: Gravedad alterada</h3>
+            <ul>
+                <li><strong>gravedad</strong> (valor entre 0 y 10)</li>
+                <li><strong>motoresActivos</strong> (true o false)</li>
+                <li><strong>tripulantesDespiertos</strong> (true o false)</li>
+            </ul>
+            <p>Si la gravedad es menor a 3 y los motores están activos, aumentar potencia. Si los tripulantes están dormidos, emitir alerta por intercomunicador.</p>
+
+            <h3> Situación 3: Falla de energía</h3>
+            <ul>
+                <li><strong>bateria</strong> (porcentaje)</li>
+                <li><strong>modoEmergencia</strong> (true o false)</li>
+                <li><strong>panelSolarActivo</strong> (true o false)</li>
+            </ul>
+            <p>Si la batería está por debajo del 15%, activar el modo emergencia. Si el panel solar está activo, derivar energía prioritaria a soporte vital.</p>
+
+            <h3> Entrega</h3>
+            <ul>
+                <li>Una hoja con pseudocódigo o código real (Python o Java).</li>
+                <li>Justificación de la lógica aplicada (3 a 5 líneas).</li>
+                <li><em>Opcional:</em> Presentación oral o grabación explicando su solución.</li>
+            </ul>
+        </section>
+    </main>
+<!--Pie de página-->
+    <footer>
+        <p> Desarrollado por Profas. Lucía Camacho y Paola Rodríguez | Curso Ciencias de la Computación</p>
+        <p>Profesor del curso: Bruno Silva</p>
+    </footer>
+
+    <script>
+        function evaluarOxigeno() {
+            const nivel = parseInt(document.getElementById("oxigeno").value);
+            let resultado = "";
+            if (nivel < 20) {  
+                resultado = " Protocolo de emergencia activado";
+            } else if (nivel> 50) { 
+                resultado = "Ventiladores activados";
+            } else {
+                resultado = "Sistemas estables";
+            }
+            document.getElementById("resultado").textContent = resultado;
+        }
+    </script>
+</body>
+</html>

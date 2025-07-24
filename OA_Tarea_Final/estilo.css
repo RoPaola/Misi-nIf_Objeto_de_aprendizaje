@@ -1,0 +1,74 @@
+/*Estilo del cuerpo*/
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #538ce9,#0a429d );
+    color: rgb(232, 232, 237);
+}
+
+header{
+    background-color: 40px 20px;
+    text-align: center;
+    border-bottom:  4px solid #1e4e8c ;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+header p{
+    font-size: 20px;
+    color: #cce7ff;
+}
+
+header h1{
+    font-size: 30px;
+    margin: 0;
+}
+main{
+    padding: 20px;
+}
+section{
+    background-color: #1b2a49;
+    border: 1px solid #29487d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+h2{
+    color: #70d6ff;
+}
+pre{
+    background-color: #1b2a49;
+    padding: 10px;
+    border-radius: 6px;
+    overflow: auto;
+
+
+}
+/*estilo para las entradas de los numeros inputs tipo number*/
+input[type="numer"]{
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    margin: 10px 0;
+}
+button{
+    padding: 10px 20px;
+    background-color: #07688e;
+    color: #cce7ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #3498db;  
+}
+#resultado{
+    color: yellow;
+    font-size: 18px;
+    margin-top: 15px;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #102542;
+    color:#cccccc;
+}
